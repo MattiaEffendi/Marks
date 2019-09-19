@@ -30,7 +30,7 @@ A telegram bot to register your school grades, calculate your averages, and much
 
       $ python3 bot.py
 	  
-- Re-open the ```config.py``` file and set the FIRST_START variable to ```False```.
+- Re-open the ```config.py``` file and set the ```FIRST_START``` variable to ```False```.
 
 - Re-start the bot:
 
