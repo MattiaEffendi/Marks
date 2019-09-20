@@ -1,7 +1,10 @@
 import botogram
+import sys
+import utils
+sys.path.append("..")
 
 
-def start(chat):
+def start(chat, message):
     kb = botogram.Buttons()
     kb[0].callback("📚 Apri il tuo libretto", "libretto")
     kb[1].callback("🔧 Impostazioni", "impostazioni")
@@ -14,5 +17,6 @@ def start(chat):
         "<i>Seleziona un'opzione dal menu.</i>"
     )
     chat.send(text, attach=kb)
+    utils.register_user(message.sender.id)
 
 
