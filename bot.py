@@ -13,7 +13,7 @@ if config.FIRST_START:
 
 @bot.command("start")
 def start(chat, message):
-    commands.start(chat)
+    commands.start(chat, message)
 
 
 @bot.callback("informazioni")

@@ -11,7 +11,7 @@ def first_start():
     try:
         query = (
             "CREATE TABLE Utenti(IDU INTEGER PRIMARY KEY AUTOINCREMENT,"
-            " ID INT, State TEXT)"
+            " ID INT UNIQUE, State TEXT)"
         )
         c.execute(query)
         conn.commit()
@@ -30,3 +30,14 @@ def first_start():
         log.warn(warn)
         print(str(e))
         sys.exit(0)
+
+
+def register_user(idu):
+    try:
+        query = (
+            "INSERT INTO Utenti(ID, State) VALUES(?, ?)"
+        )
+        c.execute(query, (idu, "-",))
+        conn.commit()
+    except sqlite3.IntegrityError as e:
+        pass
