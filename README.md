@@ -2,8 +2,17 @@
 	<img src="https://i.imgur.com/Ma6vqAE.png" width="325px" height="160px">
 </p>
 
-# iMarks [![Bot](https://img.shields.io/badge/Telegram-%40iMarksBot-blue.svg)][Bot] [![Portfolio](https://img.shields.io/badge/Portflio-%40MyPersonalPortfolio-green.svg)][Portfolio] ![Status](https://img.shields.io/badge/Status-Developement-red.svg)
-A telegram bot to register your school grades, calculate your averages, and much more
+<h1 align="center">iMarks</h3>
+
+<p align="center">
+  A telegram bot to register your school grades, calculate your averages, and much more.
+  <br>
+  <br>
+  <a href="https://t.me/iMarksBot"><img src="https://img.shields.io/badge/Telegram-%40iMarksBot-blue.svg"></a>
+  <a href="https://t.me/MyPersonalPortfolio"><img src="https://img.shields.io/badge/Portflio-%40MyPersonalPortfolio-green.svg"></a>
+  <img src="https://img.shields.io/badge/Status-Developement-red.svg">
+  <hr>
+</p>
 
 ## Features
 - [ ] Submit grades divided **by subject**
