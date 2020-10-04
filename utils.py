@@ -14,6 +14,11 @@ def first_start():
             " ID INT UNIQUE, State TEXT)"
         )
         c.execute(query)
+        query = (
+            "CREATE TABLE Voti(ID INTEGER PRIMARY KEY AUTOINCREMENT,"
+            " IDU INT, Mark DECIMAL(4,2))"
+        )
+        c.execute(query)
         conn.commit()
         info = (
             "Database has been created and setup! Please set the FIRST_START "
@@ -33,11 +38,18 @@ def first_start():
 
 
 def register_user(idu):
+    set_user_state(idu, "-")
+
+def set_user_state(idu, state):
     try:
         query = (
             "INSERT INTO Utenti(ID, State) VALUES(?, ?)"
         )
-        c.execute(query, (idu, "-",))
+        c.execute(query, (idu, state))
         conn.commit()
     except sqlite3.IntegrityError as e:
-        pass
+        query = (
+            "UPDATE Utenti SET State = ? WHERE id = ?"
+        )
+        c.execute(query, (state, idu))
+        conn.commit()
